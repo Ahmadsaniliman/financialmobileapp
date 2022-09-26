@@ -1,3 +1,6 @@
+import 'package:finacialmobileapp/constants/routes.dart';
+import 'package:finacialmobileapp/home/home.dart';
+import 'package:finacialmobileapp/onBoarding/on_boarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,18 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fintext App',
+      debugShowCheckedModeBanner: false,
+      title: 'Fintect App',
       theme: ThemeData(),
-      home: const HomePage(),
+      home: const OnBoardingScreenView(),
+      routes: {
+        homePageRoute: (context) => const HomePageView(),
+      },
     );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

@@ -14,8 +14,8 @@ class RoundSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40.0,
-      height: 10.0,
+      width: 100.0,
+      height: 5.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         color: currentOne == index ? kPrimary : kDefaultColor,

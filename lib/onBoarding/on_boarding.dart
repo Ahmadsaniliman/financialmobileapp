@@ -1,4 +1,5 @@
 import 'package:finacialmobileapp/constants/constants.dart';
+import 'package:finacialmobileapp/onBoarding/components/on_board_dec.dart';
 import 'package:finacialmobileapp/onBoarding/splash_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -17,30 +18,35 @@ class _OnBoardingScreenViewState extends State<OnBoardingScreenView> {
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SplashBar(currentOne: _currentOne),
-            Stack(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('Rectangle 34624597.png'),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 20.0,
+              ),
+              child: SizedBox(
+                height: 380,
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'assests/images/Rectangle 34624597.png',
                     ),
-                  ),
-                  child: Stack(
-                    children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: const [],
-                          ),
-                        ],
+                    Positioned(
+                      top: 70,
+                      left: 60,
+                      child: Image.asset(
+                        'assests/images/Rectangle 34624597 (1).png',
                       ),
-                    ],
-                  ),
+                    ),
+                    Image.asset(
+                      'assests/images/Ellipse 1621 (1).png',
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
+            const OnBoardTextAndButton(),
           ],
         ),
       ),
