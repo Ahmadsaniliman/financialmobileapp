@@ -29,14 +29,30 @@ class _OnBoardingScreenViewState extends State<OnBoardingScreenView> {
                 height: 380,
                 child: Stack(
                   children: [
-                    Image.asset(
-                      'assests/images/Rectangle 34624597.png',
+                    Transform.rotate(
+                      angle: -5,
+                      child: Container(
+                        height: 200.0,
+                        width: 300.0,
+                        decoration: BoxDecoration(
+                          color: kPrimary,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                      ),
                     ),
                     Positioned(
-                      top: 70,
-                      left: 60,
-                      child: Image.asset(
-                        'assests/images/Rectangle 34624597 (1).png',
+                      //   left: 70.0,
+                      //   top: 60.0,
+                      child: Transform.rotate(
+                        angle: 5,
+                        child: Container(
+                          height: 200.0,
+                          width: 300.0,
+                          decoration: BoxDecoration(
+                            color: kSecondary,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
                       ),
                     ),
                     Image.asset(
@@ -53,3 +69,15 @@ class _OnBoardingScreenViewState extends State<OnBoardingScreenView> {
     );
   }
 }
+
+
+// Image.asset(
+                    //   'assests/images/Rectangle 34624597.png',
+                    // ),
+                    // Positioned(
+                    //   top: 70,
+                    //   left: 60,
+                    //   child: Image.asset(
+                    //     'assests/images/Rectangle 34624597 (1).png',
+                    //   ),
+                    // ),

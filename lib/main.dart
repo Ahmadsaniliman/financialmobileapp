@@ -1,4 +1,5 @@
 import 'package:finacialmobileapp/constants/routes.dart';
+import 'package:finacialmobileapp/details/details.dart';
 import 'package:finacialmobileapp/home/home.dart';
 import 'package:finacialmobileapp/onBoarding/on_boarding.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       home: const OnBoardingScreenView(),
       routes: {
         homePageRoute: (context) => const HomePageView(),
+        detailsPageRoute: (context) => const DetailsPageView(),
       },
     );
   }

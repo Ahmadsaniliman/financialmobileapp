@@ -1,4 +1,5 @@
 import 'package:finacialmobileapp/constants/constants.dart';
+import 'package:finacialmobileapp/constants/routes.dart';
 import 'package:finacialmobileapp/home/activity_card.dart';
 import 'package:finacialmobileapp/home/componets/bal_card.dart';
 import 'package:finacialmobileapp/home/componets/balance_card.dart';
@@ -60,19 +61,26 @@ class HomePageView extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text(
+                        children: [
+                          const Text(
                             'Activity',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
                             ),
                           ),
-                          Text(
-                            'see All',
-                            style: TextStyle(
-                              color: kPrimary,
-                              fontSize: 15.0,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pushNamed(
+                                detailsPageRoute,
+                              );
+                            },
+                            child: const Text(
+                              'see All',
+                              style: TextStyle(
+                                color: kPrimary,
+                                fontSize: 15.0,
+                              ),
                             ),
                           ),
                         ],
