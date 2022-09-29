@@ -1,4 +1,5 @@
 import 'package:finacialmobileapp/constants/constants.dart';
+import 'package:finacialmobileapp/constants/routes.dart';
 import 'package:flutter/material.dart';
 
 class DetailsAppBar extends StatelessWidget {
@@ -36,9 +37,13 @@ class DetailsAppBar extends StatelessWidget {
               color: kDefaultColor,
             ),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  homePageRoute,
+                );
+              },
               icon: const Icon(
-                Icons.menu_open_outlined,
+                Icons.menu,
                 color: Colors.white,
               ),
             ),

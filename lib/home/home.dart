@@ -32,11 +32,27 @@ class HomePageView extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      const BalanecedCard2(
-                        title: 'Apple inc.\n(AAPl)',
-                        cardMoney: '\$7.213.05',
-                        cardMoney2: '+50,233 (5.25%)',
-                        color: kPrimary,
+                      Stack(
+                        children: [
+                          const BalanecedCard2(
+                            title: 'Apple inc.\n(AAPl)',
+                            cardMoney: '\$7.213.05',
+                            cardMoney2: '+50,233 (5.25%)',
+                            color: kPrimary,
+                          ),
+                          Positioned(
+                            top: 0,
+                            right: 0,
+                            child:
+                                Image.asset('assests/images/Ellipse 1617.png'),
+                          ),
+                          Positioned(
+                            top: 0,
+                            right: 0,
+                            child:
+                                Image.asset('assests/images/Ellipse 1618.png'),
+                          ),
+                        ],
                       ),
                       const SizedBox(width: 30.0),
                       BalanecedCard2(

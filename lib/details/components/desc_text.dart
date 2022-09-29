@@ -16,7 +16,7 @@ class DEscText extends StatelessWidget {
             color: kPrimary,
           ),
           child: const Icon(
-            Icons.menu_open_outlined,
+            Icons.photo_camera_back,
             color: Colors.white,
           ),
         ),
