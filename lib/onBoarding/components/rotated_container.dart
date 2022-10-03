@@ -22,22 +22,28 @@ class RotatedWidget extends StatelessWidget {
         child: Stack(
           //   fit: StackFit.passthrough,
           children: [
-            const BalanecedCard2(
-              title: 'Apple inc.\n(AAPl)',
-              cardMoney: '\$7.213.05',
-              cardMoney2: '+50,233 (5.25%)',
-              color: kPrimary,
+            Transform(
+              transform: Matrix4.skewX(0.3),
+              child: const BalanecedCard2(
+                title: 'Apple inc.\n(AAPl)',
+                cardMoney: '\$7.213.05',
+                cardMoney2: '+50,233 (5.25%)',
+                color: kPrimary,
+              ),
             ),
-            const Positioned(
-              left: 70.0,
-              top: 30.0,
-              child: RotatedBox(
-                quarterTurns: 0,
-                child: BalanecedCard2(
-                  title: 'Mac inc.\n(APlA)',
-                  cardMoney: '\$9.643.45',
-                  cardMoney2: '+50,233 (7.25%)',
-                  color: kColor1,
+            Transform(
+              transform: Matrix4.skewY(0.3),
+              child: const Positioned(
+                left: 70.0,
+                top: 30.0,
+                child: RotatedBox(
+                  quarterTurns: 0,
+                  child: BalanecedCard2(
+                    title: 'Mac inc.\n(APlA)',
+                    cardMoney: '\$9.643.45',
+                    cardMoney2: '+50,233 (7.25%)',
+                    color: kColor1,
+                  ),
                 ),
               ),
             ),
